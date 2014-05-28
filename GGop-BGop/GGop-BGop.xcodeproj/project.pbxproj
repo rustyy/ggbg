@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B330A6831933D87A00528FA0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A67F1933D87A00528FA0 /* background.png */; };
+		B330A6841933D87A00528FA0 /* goodgop.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A6801933D87A00528FA0 /* goodgop.png */; };
+		B330A6851933D87A00528FA0 /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A6811933D87A00528FA0 /* crosshair.png */; };
+		B330A6861933D87A00528FA0 /* badgop.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A6821933D87A00528FA0 /* badgop.png */; };
+		B330A68B1933DCC100528FA0 /* ggbgStartGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B330A68A1933DCC100528FA0 /* ggbgStartGame.m */; };
+		B330A6901933DF7200528FA0 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A68E1933DF7200528FA0 /* start.png */; };
+		B330A6911933DF7200528FA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A68F1933DF7200528FA0 /* logo.png */; };
+		B38FA63D192F5C0900FD3140 /* ggbgGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B38FA63C192F5C0900FD3140 /* ggbgGameOverScene.m */; };
+		B3B952C4192E9ED200AE6836 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C3192E9ED200AE6836 /* Foundation.framework */; };
+		B3B952C6192E9ED200AE6836 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C5192E9ED200AE6836 /* CoreGraphics.framework */; };
+		B3B952C8192E9ED200AE6836 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C7192E9ED200AE6836 /* UIKit.framework */; };
+		B3B952CA192E9ED200AE6836 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C9192E9ED200AE6836 /* SpriteKit.framework */; };
+		B3B952D0192E9ED200AE6836 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3B952CE192E9ED200AE6836 /* InfoPlist.strings */; };
+		B3B952D2192E9ED200AE6836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B952D1192E9ED200AE6836 /* main.m */; };
+		B3B952D6192E9ED200AE6836 /* ggbgAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B952D5192E9ED200AE6836 /* ggbgAppDelegate.m */; };
+		B3B952D9192E9ED200AE6836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B952D7192E9ED200AE6836 /* Main.storyboard */; };
+		B3B952DC192E9ED200AE6836 /* ggbgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B952DB192E9ED200AE6836 /* ggbgViewController.m */; };
+		B3B952DF192E9ED200AE6836 /* ggbgGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B952DE192E9ED200AE6836 /* ggbgGameScene.m */; };
+		B3B952E3192E9ED200AE6836 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B952E2192E9ED200AE6836 /* Images.xcassets */; };
+		B3B952EA192E9ED200AE6836 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952E9192E9ED200AE6836 /* XCTest.framework */; };
+		B3B952EB192E9ED200AE6836 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C3192E9ED200AE6836 /* Foundation.framework */; };
+		B3B952EC192E9ED200AE6836 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C7192E9ED200AE6836 /* UIKit.framework */; };
+		B3B952F4192E9ED200AE6836 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3B952F2192E9ED200AE6836 /* InfoPlist.strings */; };
+		B3B952F6192E9ED200AE6836 /* GGop_BGopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B952F5192E9ED200AE6836 /* GGop_BGopTests.m */; };
+		B3B95308192EA72000AE6836 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B95307192EA72000AE6836 /* CoreMotion.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3B952ED192E9ED200AE6836 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3B952B8192E9ED200AE6836 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3B952BF192E9ED200AE6836;
+			remoteInfo = "GGop-BGop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B330A67F1933D87A00528FA0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		B330A6801933D87A00528FA0 /* goodgop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goodgop.png; sourceTree = "<group>"; };
+		B330A6811933D87A00528FA0 /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshair.png; sourceTree = "<group>"; };
+		B330A6821933D87A00528FA0 /* badgop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badgop.png; sourceTree = "<group>"; };
+		B330A6891933DCC100528FA0 /* ggbgStartGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggbgStartGame.h; sourceTree = "<group>"; };
+		B330A68A1933DCC100528FA0 /* ggbgStartGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggbgStartGame.m; sourceTree = "<group>"; };
+		B330A68E1933DF7200528FA0 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		B330A68F1933DF7200528FA0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B38FA63B192F5C0900FD3140 /* ggbgGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggbgGameOverScene.h; sourceTree = "<group>"; };
+		B38FA63C192F5C0900FD3140 /* ggbgGameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggbgGameOverScene.m; sourceTree = "<group>"; };
+		B3B952C0192E9ED200AE6836 /* GGop-BGop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GGop-BGop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B952C3192E9ED200AE6836 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B3B952C5192E9ED200AE6836 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B3B952C7192E9ED200AE6836 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B3B952C9192E9ED200AE6836 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		B3B952CD192E9ED200AE6836 /* GGop-BGop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GGop-BGop-Info.plist"; sourceTree = "<group>"; };
+		B3B952CF192E9ED200AE6836 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B3B952D1192E9ED200AE6836 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3B952D3192E9ED200AE6836 /* GGop-BGop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GGop-BGop-Prefix.pch"; sourceTree = "<group>"; };
+		B3B952D4192E9ED200AE6836 /* ggbgAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ggbgAppDelegate.h; sourceTree = "<group>"; };
+		B3B952D5192E9ED200AE6836 /* ggbgAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ggbgAppDelegate.m; sourceTree = "<group>"; };
+		B3B952D8192E9ED200AE6836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3B952DA192E9ED200AE6836 /* ggbgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ggbgViewController.h; sourceTree = "<group>"; };
+		B3B952DB192E9ED200AE6836 /* ggbgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ggbgViewController.m; sourceTree = "<group>"; };
+		B3B952DD192E9ED200AE6836 /* ggbgGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ggbgGameScene.h; sourceTree = "<group>"; };
+		B3B952DE192E9ED200AE6836 /* ggbgGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ggbgGameScene.m; sourceTree = "<group>"; };
+		B3B952E2192E9ED200AE6836 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B3B952E8192E9ED200AE6836 /* GGop-BGopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GGop-BGopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B952E9192E9ED200AE6836 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B3B952F1192E9ED200AE6836 /* GGop-BGopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GGop-BGopTests-Info.plist"; sourceTree = "<group>"; };
+		B3B952F3192E9ED200AE6836 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B3B952F5192E9ED200AE6836 /* GGop_BGopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGop_BGopTests.m; sourceTree = "<group>"; };
+		B3B95307192EA72000AE6836 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3B952BD192E9ED200AE6836 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B95308192EA72000AE6836 /* CoreMotion.framework in Frameworks */,
+				B3B952C6192E9ED200AE6836 /* CoreGraphics.framework in Frameworks */,
+				B3B952C8192E9ED200AE6836 /* UIKit.framework in Frameworks */,
+				B3B952CA192E9ED200AE6836 /* SpriteKit.framework in Frameworks */,
+				B3B952C4192E9ED200AE6836 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3B952E5192E9ED200AE6836 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B952EA192E9ED200AE6836 /* XCTest.framework in Frameworks */,
+				B3B952EC192E9ED200AE6836 /* UIKit.framework in Frameworks */,
+				B3B952EB192E9ED200AE6836 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B330A6871933DC4800528FA0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B330A68D1933DF5B00528FA0 /* MiscObjects */,
+				B330A68C1933DF5300528FA0 /* GameObjects */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B330A6881933DCA100528FA0 /* StartGame */ = {
+			isa = PBXGroup;
+			children = (
+				B330A6891933DCC100528FA0 /* ggbgStartGame.h */,
+				B330A68A1933DCC100528FA0 /* ggbgStartGame.m */,
+			);
+			name = StartGame;
+			sourceTree = "<group>";
+		};
+		B330A68C1933DF5300528FA0 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B330A67F1933D87A00528FA0 /* background.png */,
+				B330A6801933D87A00528FA0 /* goodgop.png */,
+				B330A6811933D87A00528FA0 /* crosshair.png */,
+				B330A6821933D87A00528FA0 /* badgop.png */,
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		B330A68D1933DF5B00528FA0 /* MiscObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B330A68E1933DF7200528FA0 /* start.png */,
+				B330A68F1933DF7200528FA0 /* logo.png */,
+			);
+			name = MiscObjects;
+			sourceTree = "<group>";
+		};
+		B38FA63E192F5DEA00FD3140 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				B38FA63B192F5C0900FD3140 /* ggbgGameOverScene.h */,
+				B38FA63C192F5C0900FD3140 /* ggbgGameOverScene.m */,
+			);
+			name = GameOver;
+			sourceTree = "<group>";
+		};
+		B38FA63F192F5DF900FD3140 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				B3B952DD192E9ED200AE6836 /* ggbgGameScene.h */,
+				B3B952DE192E9ED200AE6836 /* ggbgGameScene.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		B3B952B7192E9ED200AE6836 = {
+			isa = PBXGroup;
+			children = (
+				B3B952CB192E9ED200AE6836 /* GGop-BGop */,
+				B3B952EF192E9ED200AE6836 /* GGop-BGopTests */,
+				B3B952C2192E9ED200AE6836 /* Frameworks */,
+				B3B952C1192E9ED200AE6836 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3B952C1192E9ED200AE6836 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3B952C0192E9ED200AE6836 /* GGop-BGop.app */,
+				B3B952E8192E9ED200AE6836 /* GGop-BGopTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3B952C2192E9ED200AE6836 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3B95307192EA72000AE6836 /* CoreMotion.framework */,
+				B3B952C3192E9ED200AE6836 /* Foundation.framework */,
+				B3B952C5192E9ED200AE6836 /* CoreGraphics.framework */,
+				B3B952C7192E9ED200AE6836 /* UIKit.framework */,
+				B3B952C9192E9ED200AE6836 /* SpriteKit.framework */,
+				B3B952E9192E9ED200AE6836 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3B952CB192E9ED200AE6836 /* GGop-BGop */ = {
+			isa = PBXGroup;
+			children = (
+				B330A6871933DC4800528FA0 /* Images */,
+				B330A6881933DCA100528FA0 /* StartGame */,
+				B38FA63F192F5DF900FD3140 /* Game */,
+				B38FA63E192F5DEA00FD3140 /* GameOver */,
+				B3B952D4192E9ED200AE6836 /* ggbgAppDelegate.h */,
+				B3B952D5192E9ED200AE6836 /* ggbgAppDelegate.m */,
+				B3B952D7192E9ED200AE6836 /* Main.storyboard */,
+				B3B952DA192E9ED200AE6836 /* ggbgViewController.h */,
+				B3B952DB192E9ED200AE6836 /* ggbgViewController.m */,
+				B3B952E2192E9ED200AE6836 /* Images.xcassets */,
+				B3B952CC192E9ED200AE6836 /* Supporting Files */,
+			);
+			path = "GGop-BGop";
+			sourceTree = "<group>";
+		};
+		B3B952CC192E9ED200AE6836 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3B952CD192E9ED200AE6836 /* GGop-BGop-Info.plist */,
+				B3B952CE192E9ED200AE6836 /* InfoPlist.strings */,
+				B3B952D1192E9ED200AE6836 /* main.m */,
+				B3B952D3192E9ED200AE6836 /* GGop-BGop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3B952EF192E9ED200AE6836 /* GGop-BGopTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3B952F5192E9ED200AE6836 /* GGop_BGopTests.m */,
+				B3B952F0192E9ED200AE6836 /* Supporting Files */,
+			);
+			path = "GGop-BGopTests";
+			sourceTree = "<group>";
+		};
+		B3B952F0192E9ED200AE6836 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3B952F1192E9ED200AE6836 /* GGop-BGopTests-Info.plist */,
+				B3B952F2192E9ED200AE6836 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3B952BF192E9ED200AE6836 /* GGop-BGop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3B952F9192E9ED200AE6836 /* Build configuration list for PBXNativeTarget "GGop-BGop" */;
+			buildPhases = (
+				B3B952BC192E9ED200AE6836 /* Sources */,
+				B3B952BD192E9ED200AE6836 /* Frameworks */,
+				B3B952BE192E9ED200AE6836 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GGop-BGop";
+			productName = "GGop-BGop";
+			productReference = B3B952C0192E9ED200AE6836 /* GGop-BGop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3B952E7192E9ED200AE6836 /* GGop-BGopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3B952FC192E9ED200AE6836 /* Build configuration list for PBXNativeTarget "GGop-BGopTests" */;
+			buildPhases = (
+				B3B952E4192E9ED200AE6836 /* Sources */,
+				B3B952E5192E9ED200AE6836 /* Frameworks */,
+				B3B952E6192E9ED200AE6836 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3B952EE192E9ED200AE6836 /* PBXTargetDependency */,
+			);
+			name = "GGop-BGopTests";
+			productName = "GGop-BGopTests";
+			productReference = B3B952E8192E9ED200AE6836 /* GGop-BGopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3B952B8192E9ED200AE6836 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ggbg;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Zeotyn;
+				TargetAttributes = {
+					B3B952E7192E9ED200AE6836 = {
+						TestTargetID = B3B952BF192E9ED200AE6836;
+					};
+				};
+			};
+			buildConfigurationList = B3B952BB192E9ED200AE6836 /* Build configuration list for PBXProject "GGop-BGop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3B952B7192E9ED200AE6836;
+			productRefGroup = B3B952C1192E9ED200AE6836 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3B952BF192E9ED200AE6836 /* GGop-BGop */,
+				B3B952E7192E9ED200AE6836 /* GGop-BGopTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3B952BE192E9ED200AE6836 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B952D0192E9ED200AE6836 /* InfoPlist.strings in Resources */,
+				B330A6841933D87A00528FA0 /* goodgop.png in Resources */,
+				B330A6911933DF7200528FA0 /* logo.png in Resources */,
+				B330A6901933DF7200528FA0 /* start.png in Resources */,
+				B330A6831933D87A00528FA0 /* background.png in Resources */,
+				B3B952E3192E9ED200AE6836 /* Images.xcassets in Resources */,
+				B330A6861933D87A00528FA0 /* badgop.png in Resources */,
+				B330A6851933D87A00528FA0 /* crosshair.png in Resources */,
+				B3B952D9192E9ED200AE6836 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3B952E6192E9ED200AE6836 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B952F4192E9ED200AE6836 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3B952BC192E9ED200AE6836 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B952DC192E9ED200AE6836 /* ggbgViewController.m in Sources */,
+				B330A68B1933DCC100528FA0 /* ggbgStartGame.m in Sources */,
+				B3B952D2192E9ED200AE6836 /* main.m in Sources */,
+				B3B952D6192E9ED200AE6836 /* ggbgAppDelegate.m in Sources */,
+				B3B952DF192E9ED200AE6836 /* ggbgGameScene.m in Sources */,
+				B38FA63D192F5C0900FD3140 /* ggbgGameOverScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3B952E4192E9ED200AE6836 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B952F6192E9ED200AE6836 /* GGop_BGopTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3B952EE192E9ED200AE6836 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3B952BF192E9ED200AE6836 /* GGop-BGop */;
+			targetProxy = B3B952ED192E9ED200AE6836 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3B952CE192E9ED200AE6836 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3B952CF192E9ED200AE6836 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B3B952D7192E9ED200AE6836 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3B952D8192E9ED200AE6836 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3B952F2192E9ED200AE6836 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3B952F3192E9ED200AE6836 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3B952F7192E9ED200AE6836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B3B952F8192E9ED200AE6836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3B952FA192E9ED200AE6836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GGop-BGop/GGop-BGop-Prefix.pch";
+				INFOPLIST_FILE = "GGop-BGop/GGop-BGop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B3B952FB192E9ED200AE6836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GGop-BGop/GGop-BGop-Prefix.pch";
+				INFOPLIST_FILE = "GGop-BGop/GGop-BGop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B3B952FD192E9ED200AE6836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GGop-BGop.app/GGop-BGop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GGop-BGop/GGop-BGop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GGop-BGopTests/GGop-BGopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B3B952FE192E9ED200AE6836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GGop-BGop.app/GGop-BGop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GGop-BGop/GGop-BGop-Prefix.pch";
+				INFOPLIST_FILE = "GGop-BGopTests/GGop-BGopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3B952BB192E9ED200AE6836 /* Build configuration list for PBXProject "GGop-BGop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3B952F7192E9ED200AE6836 /* Debug */,
+				B3B952F8192E9ED200AE6836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3B952F9192E9ED200AE6836 /* Build configuration list for PBXNativeTarget "GGop-BGop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3B952FA192E9ED200AE6836 /* Debug */,
+				B3B952FB192E9ED200AE6836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3B952FC192E9ED200AE6836 /* Build configuration list for PBXNativeTarget "GGop-BGopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3B952FD192E9ED200AE6836 /* Debug */,
+				B3B952FE192E9ED200AE6836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3B952B8192E9ED200AE6836 /* Project object */;
+}

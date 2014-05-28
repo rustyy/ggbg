@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B441B0F-AD27-44B6-A460-15A2BE7A66A6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GGop-BGop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D0771161-C350-4BF0-9D2D-18F0D5EE6AE2</key>
+		<string>ssh://github.com/rustyy/ggbg.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GGop-BGop/GGop-BGop.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D0771161-C350-4BF0-9D2D-18F0D5EE6AE2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/rustyy/ggbg.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D0771161-C350-4BF0-9D2D-18F0D5EE6AE2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D0771161-C350-4BF0-9D2D-18F0D5EE6AE2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GGBG</string>
+		</dict>
+	</array>
+</dict>
+</plist>
