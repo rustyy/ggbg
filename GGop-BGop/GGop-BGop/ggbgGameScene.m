@@ -20,7 +20,7 @@ NSInteger *gameTimerScore = 0;
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
         
-        healthPoints = 50;
+        healthPoints = 100;
         _timerPoints = 0;
         [self startTimer];
         
@@ -37,14 +37,7 @@ NSInteger *gameTimerScore = 0;
                                                  }
                                              }];
         
-        //adding healPointsLabel
-        _healthPointsLabel = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        _healthPointsLabel.text = [NSString stringWithFormat:@"Health: %d", healthPoints];
-        _healthPointsLabel.fontSize = 20;
-        _healthPointsLabel.position = CGPointMake(CGRectGetMidX(self.frame), 520);
-        _healthPointsLabel.zPosition = 5;
-        
-        [self addChild:_healthPointsLabel];
+
         
         //adding gameTimerPoints
         _gameTimerPoints = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
@@ -72,6 +65,12 @@ NSInteger *gameTimerScore = 0;
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
         
+        //adding the hp bar
+        _hpBar =  [SKSpriteNode spriteNodeWithColor: [UIColor greenColor] size: CGSizeMake(640, 20)];
+        _hpBar.zPosition = 6;
+        _hpBar.position = CGPointMake(0, 568);
+        [self addChild:_hpBar];
+        
         //schedule enemies
         SKAction *wait = [SKAction waitForDuration:0.3];
         SKAction *callGop = [SKAction runBlock:^{
@@ -87,7 +86,6 @@ NSInteger *gameTimerScore = 0;
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     _touching = YES;
     
-//    _crosshair.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_crosshair.size];
     _crosshair.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:1.0];
     _crosshair.physicsBody.dynamic = NO;
     _crosshair.physicsBody.categoryBitMask = crosshairCategory;
@@ -126,8 +124,8 @@ NSInteger *gameTimerScore = 0;
             
             if ([enemy.name isEqualToString:@"badGop"]) {
                 [enemy runAction:[SKAction removeFromParent]];
-                healthPoints -= 10;
-                _healthPointsLabel.text = [NSString stringWithFormat:@"%d", healthPoints];
+                healthPoints -= 7;
+
                 
             } else {
                 [enemy runAction:[SKAction removeFromParent]];
@@ -136,7 +134,7 @@ NSInteger *gameTimerScore = 0;
                 } else if (healthPoints >= 90 ) {
                     healthPoints = 100;
                 }
-                _healthPointsLabel.text = [NSString stringWithFormat:@"%d", healthPoints];
+
             }
             
 
@@ -194,12 +192,11 @@ NSInteger *gameTimerScore = 0;
     
     
     _gameTimerPoints.text = [[NSString alloc] initWithFormat:@"%d", _timerPoints];
-    _healthPointsLabel.text = [[NSString alloc] initWithFormat:@"%d", healthPoints];
-    
+    [self hpBarSize];
     if (healthPoints <=0) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         [self.timer invalidate];
-        SKScene * gameOverScene = [[ggbgGameOverScene alloc] initWithSize:self.size];
+        SKScene * gameOverScene = [[ggbgGameOverScene alloc] initWithSize:self.size score:_timerPoints];
         [self.view presentScene:gameOverScene transition: reveal];
 
     }
@@ -311,46 +308,113 @@ NSInteger *gameTimerScore = 0;
     
 }
 
+//-(CGPathRef)topBottom {
+//    UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
+//    
+//    [bezierPath moveToPoint: CGPointMake(69.5, -0.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(69.5, 206.5) controlPoint1: CGPointMake(69.5, -0.5) controlPoint2: CGPointMake(9.5, 177.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(238.5, 349.5) controlPoint1: CGPointMake(129.5, 235.5) controlPoint2: CGPointMake(259.5, 291.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(96.5, 569.5) controlPoint1: CGPointMake(217.5, 407.5) controlPoint2: CGPointMake(96.5, 569.5)];
+//    
+//    return bezierPath.CGPath;
+//}
+
 -(CGPathRef)topBottom {
     UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
-    
-    [bezierPath moveToPoint: CGPointMake(69.5, -0.5)];
-    [bezierPath addCurveToPoint: CGPointMake(69.5, 206.5) controlPoint1: CGPointMake(69.5, -0.5) controlPoint2: CGPointMake(9.5, 177.5)];
+    int x = [self getRandomNumberBetween:20 to:300];
+    int x_end = [self getRandomNumberBetween:20 to:300];
+    [bezierPath moveToPoint: CGPointMake(x, -50.0)];
+    [bezierPath addCurveToPoint: CGPointMake(x, 206.5) controlPoint1: CGPointMake(x, -50) controlPoint2: CGPointMake(9.5, 177.5)];
     [bezierPath addCurveToPoint: CGPointMake(238.5, 349.5) controlPoint1: CGPointMake(129.5, 235.5) controlPoint2: CGPointMake(259.5, 291.5)];
-    [bezierPath addCurveToPoint: CGPointMake(96.5, 569.5) controlPoint1: CGPointMake(217.5, 407.5) controlPoint2: CGPointMake(96.5, 569.5)];
+    [bezierPath addCurveToPoint: CGPointMake(x_end, 600) controlPoint1: CGPointMake(217.5, 407.5) controlPoint2: CGPointMake(x_end, 600)];
     
     return bezierPath.CGPath;
 }
+
+
+//-(CGPathRef)bottomTop {
+//    UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
+//    
+//    [bezierPath moveToPoint: CGPointMake(255.5, 567.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(94.5, 366.5) controlPoint1: CGPointMake(255.5, 567.5) controlPoint2: CGPointMake(57.5, 459.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(218.5, 193.5) controlPoint1: CGPointMake(131.5, 273.5) controlPoint2: CGPointMake(254.5, 249.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(77.5, -0.5) controlPoint1: CGPointMake(182.5, 137.5) controlPoint2: CGPointMake(77.5, -0.5)];
+//    
+//    return bezierPath.CGPath;
+//}
 
 -(CGPathRef)bottomTop {
     UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
     
-    [bezierPath moveToPoint: CGPointMake(255.5, 567.5)];
-    [bezierPath addCurveToPoint: CGPointMake(94.5, 366.5) controlPoint1: CGPointMake(255.5, 567.5) controlPoint2: CGPointMake(57.5, 459.5)];
+    int x = [self getRandomNumberBetween:20 to:300];
+    int x_end = [self getRandomNumberBetween:20 to:300];
+    
+    [bezierPath moveToPoint: CGPointMake(x, 600)];
+    [bezierPath addCurveToPoint: CGPointMake(x, 366.5) controlPoint1: CGPointMake(x, 600) controlPoint2: CGPointMake(x, 459.5)];
     [bezierPath addCurveToPoint: CGPointMake(218.5, 193.5) controlPoint1: CGPointMake(131.5, 273.5) controlPoint2: CGPointMake(254.5, 249.5)];
-    [bezierPath addCurveToPoint: CGPointMake(77.5, -0.5) controlPoint1: CGPointMake(182.5, 137.5) controlPoint2: CGPointMake(77.5, -0.5)];
+    [bezierPath addCurveToPoint: CGPointMake(x_end, -50) controlPoint1: CGPointMake(182.5, 137.5) controlPoint2: CGPointMake(x_end, -50)];
     
     return bezierPath.CGPath;
 }
+
+//-(CGPathRef)leftRightCurveTop {
+//    UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
+//    
+//    [bezierPath moveToPoint: CGPointMake(319.5, 139.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(169.5, 442.5) controlPoint1: CGPointMake(319.5, 139.5) controlPoint2: CGPointMake(326.5, 453.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(-0.5, 198.5) controlPoint1: CGPointMake(12.5, 431.5) controlPoint2: CGPointMake(-0.5, 198.5)];
+//    
+//    return bezierPath.CGPath;
+//}
 
 -(CGPathRef)leftRightCurveTop {
     UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
     
-    [bezierPath moveToPoint: CGPointMake(319.5, 139.5)];
-    [bezierPath addCurveToPoint: CGPointMake(169.5, 442.5) controlPoint1: CGPointMake(319.5, 139.5) controlPoint2: CGPointMake(326.5, 453.5)];
-    [bezierPath addCurveToPoint: CGPointMake(-0.5, 198.5) controlPoint1: CGPointMake(12.5, 431.5) controlPoint2: CGPointMake(-0.5, 198.5)];
+    int y = [self getRandomNumberBetween:20 to:560];
+    int y_end = [self getRandomNumberBetween:20 to:560];
+
+    [bezierPath moveToPoint: CGPointMake(370, y)];
+    [bezierPath addCurveToPoint: CGPointMake(169.5, y) controlPoint1: CGPointMake(319.5, y) controlPoint2: CGPointMake(326.5, 453.5)];
+    [bezierPath addCurveToPoint: CGPointMake(-50, y_end) controlPoint1: CGPointMake(12.5, 431.5) controlPoint2: CGPointMake(-50, y_end)];
     
     return bezierPath.CGPath;
 }
 
+//-(CGPathRef)leftRightCurveBottom {
+//    UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
+//    
+//    [bezierPath moveToPoint: CGPointMake(320.5, 470.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(173.5, 149.5) controlPoint1: CGPointMake(320.5, 470.5) controlPoint2: CGPointMake(257.5, 94.5)];
+//    [bezierPath addCurveToPoint: CGPointMake(1.5, 309.5) controlPoint1: CGPointMake(89.5, 204.5) controlPoint2: CGPointMake(1.5, 309.5)];
+//    
+//    return bezierPath.CGPath;
+//}
+
 -(CGPathRef)leftRightCurveBottom {
     UIBezierPath *bezierPath =  [UIBezierPath bezierPath];
     
-    [bezierPath moveToPoint: CGPointMake(320.5, 470.5)];
-    [bezierPath addCurveToPoint: CGPointMake(173.5, 149.5) controlPoint1: CGPointMake(320.5, 470.5) controlPoint2: CGPointMake(257.5, 94.5)];
-    [bezierPath addCurveToPoint: CGPointMake(1.5, 309.5) controlPoint1: CGPointMake(89.5, 204.5) controlPoint2: CGPointMake(1.5, 309.5)];
+    int y = [self getRandomNumberBetween:20 to:560];
+    int y_end = [self getRandomNumberBetween:20 to:560];
+    
+    [bezierPath moveToPoint: CGPointMake(370, y)];
+    [bezierPath addCurveToPoint: CGPointMake(y, 149.5) controlPoint1: CGPointMake(320.5, y) controlPoint2: CGPointMake(257.5, y)];
+    [bezierPath addCurveToPoint: CGPointMake(-50, y_end) controlPoint1: CGPointMake(89.5, 204.5) controlPoint2: CGPointMake(-50, y_end)];
     
     return bezierPath.CGPath;
+}
+
+- (void) hpBarSize{
+    int diff = 100 - healthPoints;
+    float newPosition = 0 - (3.2 * diff);
+    _hpBar.position = CGPointMake(newPosition, 568);
+    
+    if (healthPoints >= 75) {
+        _hpBar.color = [UIColor greenColor];
+    } else if (healthPoints <= 75 && healthPoints >=50) {
+        _hpBar.color = [UIColor orangeColor];
+    } else {
+        _hpBar.color = [UIColor redColor];
+    }
 }
 
 -(int)getRandomNumberBetween:(int)from to:(int)to {

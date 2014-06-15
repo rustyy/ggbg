@@ -14,6 +14,16 @@
 		B330A68B1933DCC100528FA0 /* ggbgStartGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B330A68A1933DCC100528FA0 /* ggbgStartGame.m */; };
 		B330A6901933DF7200528FA0 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A68E1933DF7200528FA0 /* start.png */; };
 		B330A6911933DF7200528FA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B330A68F1933DF7200528FA0 /* logo.png */; };
+		B3565439194E30FB00D3C00D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3565438194E30FB00D3C00D /* Parse.framework */; };
+		B356543B194E313400D3C00D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B356543A194E313400D3C00D /* AudioToolbox.framework */; };
+		B356543D194E313D00D3C00D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B356543C194E313D00D3C00D /* CFNetwork.framework */; };
+		B356543F194E315300D3C00D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B356543E194E315300D3C00D /* CoreLocation.framework */; };
+		B3565441194E315F00D3C00D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3565440194E315F00D3C00D /* libz.dylib */; };
+		B3565443194E316700D3C00D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3565442194E316700D3C00D /* MobileCoreServices.framework */; };
+		B3565445194E317300D3C00D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3565444194E317300D3C00D /* QuartzCore.framework */; };
+		B3565447194E318100D3C00D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3565446194E318100D3C00D /* Security.framework */; };
+		B3565449194E318A00D3C00D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3565448194E318A00D3C00D /* StoreKit.framework */; };
+		B356544B194E319600D3C00D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B356544A194E319600D3C00D /* SystemConfiguration.framework */; };
 		B38FA63D192F5C0900FD3140 /* ggbgGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B38FA63C192F5C0900FD3140 /* ggbgGameOverScene.m */; };
 		B3B952C4192E9ED200AE6836 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C3192E9ED200AE6836 /* Foundation.framework */; };
 		B3B952C6192E9ED200AE6836 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B952C5192E9ED200AE6836 /* CoreGraphics.framework */; };
@@ -53,6 +63,16 @@
 		B330A68A1933DCC100528FA0 /* ggbgStartGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggbgStartGame.m; sourceTree = "<group>"; };
 		B330A68E1933DF7200528FA0 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		B330A68F1933DF7200528FA0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B3565438194E30FB00D3C00D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B356543A194E313400D3C00D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B356543C194E313D00D3C00D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B356543E194E315300D3C00D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B3565440194E315F00D3C00D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B3565442194E316700D3C00D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B3565444194E317300D3C00D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B3565446194E318100D3C00D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B3565448194E318A00D3C00D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B356544A194E319600D3C00D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B38FA63B192F5C0900FD3140 /* ggbgGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggbgGameOverScene.h; sourceTree = "<group>"; };
 		B38FA63C192F5C0900FD3140 /* ggbgGameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggbgGameOverScene.m; sourceTree = "<group>"; };
 		B3B952C0192E9ED200AE6836 /* GGop-BGop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GGop-BGop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,10 +105,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B356544B194E319600D3C00D /* SystemConfiguration.framework in Frameworks */,
+				B3565449194E318A00D3C00D /* StoreKit.framework in Frameworks */,
+				B3565447194E318100D3C00D /* Security.framework in Frameworks */,
+				B3565445194E317300D3C00D /* QuartzCore.framework in Frameworks */,
+				B3565443194E316700D3C00D /* MobileCoreServices.framework in Frameworks */,
+				B3565441194E315F00D3C00D /* libz.dylib in Frameworks */,
+				B356543F194E315300D3C00D /* CoreLocation.framework in Frameworks */,
+				B356543D194E313D00D3C00D /* CFNetwork.framework in Frameworks */,
+				B356543B194E313400D3C00D /* AudioToolbox.framework in Frameworks */,
 				B3B95308192EA72000AE6836 /* CoreMotion.framework in Frameworks */,
 				B3B952C6192E9ED200AE6836 /* CoreGraphics.framework in Frameworks */,
 				B3B952C8192E9ED200AE6836 /* UIKit.framework in Frameworks */,
 				B3B952CA192E9ED200AE6836 /* SpriteKit.framework in Frameworks */,
+				B3565439194E30FB00D3C00D /* Parse.framework in Frameworks */,
 				B3B952C4192E9ED200AE6836 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +214,16 @@
 		B3B952C2192E9ED200AE6836 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B356544A194E319600D3C00D /* SystemConfiguration.framework */,
+				B3565448194E318A00D3C00D /* StoreKit.framework */,
+				B3565446194E318100D3C00D /* Security.framework */,
+				B3565444194E317300D3C00D /* QuartzCore.framework */,
+				B3565442194E316700D3C00D /* MobileCoreServices.framework */,
+				B3565440194E315F00D3C00D /* libz.dylib */,
+				B356543E194E315300D3C00D /* CoreLocation.framework */,
+				B356543C194E313D00D3C00D /* CFNetwork.framework */,
+				B356543A194E313400D3C00D /* AudioToolbox.framework */,
+				B3565438194E30FB00D3C00D /* Parse.framework */,
 				B3B95307192EA72000AE6836 /* CoreMotion.framework */,
 				B3B952C3192E9ED200AE6836 /* Foundation.framework */,
 				B3B952C5192E9ED200AE6836 /* CoreGraphics.framework */,
@@ -475,6 +515,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGop-BGop/GGop-BGop-Prefix.pch";
 				INFOPLIST_FILE = "GGop-BGop/GGop-BGop-Info.plist";
@@ -489,6 +533,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGop-BGop/GGop-BGop-Prefix.pch";
 				INFOPLIST_FILE = "GGop-BGop/GGop-BGop-Info.plist";

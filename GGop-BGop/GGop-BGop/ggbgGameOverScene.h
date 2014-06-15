@@ -7,8 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <Parse/Parse.h>
 
 @interface ggbgGameOverScene : SKScene
 
-
+-(id)initWithSize:(CGSize)size score: (NSInteger)player_score;
 @end

@@ -37,5 +37,6 @@ static const uint8_t gopCategory = 2;
 @property (nonatomic, strong) SKLabelNode *healthPointsLabel;
 @property (nonatomic, strong) SKLabelNode *gameTimerPoints;
 @property (strong, nonatomic) NSTimer *timer;
+@property SKSpriteNode *hpBar;
 
 @end
