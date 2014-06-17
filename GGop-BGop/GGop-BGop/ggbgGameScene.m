@@ -11,16 +11,16 @@
 
 BOOL _touching = NO;
 NSInteger *gameTimerScore = 0;
+
 @implementation ggbgGameScene
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         
-        
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
         
-        healthPoints = 100;
+        healthPoints = 50;
         _timerPoints = 0;
         [self startTimer];
         
@@ -40,13 +40,36 @@ NSInteger *gameTimerScore = 0;
 
         
         //adding gameTimerPoints
-        _gameTimerPoints = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Neue"];
-        _gameTimerPoints.text = [NSString stringWithFormat:@"Score: %d", _timerPoints];
-        _gameTimerPoints.fontSize = 35;
-        _gameTimerPoints.position = CGPointMake(CGRectGetMidX(self.frame), 500);
+        _gameTimerPoints = [SKLabelNode labelNodeWithFontNamed:@"Standard0765"];
+        _gameTimerPoints.text = [NSString stringWithFormat:@"%d", _timerPoints];
+        _gameTimerPoints.fontSize = 22;
+        _gameTimerPoints.position = CGPointMake(310, 530);
         _gameTimerPoints.zPosition = 1;
-        
+        _gameTimerPoints.horizontalAlignmentMode = 2;
         [self addChild:_gameTimerPoints];
+        
+        //adding highest Score
+        UIDevice * currentDevice = [UIDevice currentDevice];
+        NSString *deviceIDString = [currentDevice.identifierForVendor UUIDString]; //getting unique id for the user
+        PFQuery *query = [PFQuery queryWithClassName:@"PlayerScore"]; //creating query for Parse
+        [query whereKey:@"user_id" equalTo:deviceIDString];
+        [query orderByDescending:@"score"]; //Sorting the score so we have highest score on the top
+        [query findObjectsInBackgroundWithBlock:^(NSArray *scoreArray, NSError *error) {
+            
+            NSNumber* hightestScore = [scoreArray.firstObject objectForKey:@"score"]; //highest score is first object
+            NSLog(@"highest score %@ devise %@",hightestScore, deviceIDString);
+            
+            NSString * highscoremsg = [NSString stringWithFormat:@"Highscore: %@",hightestScore];
+            
+            SKLabelNode *highscore = [SKLabelNode labelNodeWithFontNamed:@"Standard0765"];
+            highscore.fontSize = 9;
+            highscore.text = highscoremsg;
+            highscore.position = CGPointMake(309, 515);
+            highscore.zPosition = 1;
+            highscore.horizontalAlignmentMode = 2;
+            [self addChild:highscore];
+            
+        }];
         
         //init several sizes used in all scene
         screenRect = [[UIScreen mainScreen] bounds];
@@ -54,7 +77,7 @@ NSInteger *gameTimerScore = 0;
         screenWidth = screenRect.size.width;
         
         //adding the crosshair
-        _crosshair = [SKSpriteNode spriteNodeWithImageNamed:@"crosshair"];
+        _crosshair = [SKSpriteNode spriteNodeWithImageNamed:@"crosshairs"];
         _crosshair.size = CGSizeMake(50, 50);
         _crosshair.zPosition = 4;
         _crosshair.position = CGPointMake(self.size.width/2, self.size.height/2);
@@ -191,7 +214,7 @@ NSInteger *gameTimerScore = 0;
     healthPoints--;
     
     
-    _gameTimerPoints.text = [[NSString alloc] initWithFormat:@"Score: %d", _timerPoints];
+    _gameTimerPoints.text = [[NSString alloc] initWithFormat:@"%d", _timerPoints];
     [self hpBarSize];
     if (healthPoints <=0) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
@@ -262,34 +285,42 @@ NSInteger *gameTimerScore = 0;
         SKAction *followPath;
         SKAction *scale;
         
+        float duration = 6;
+        
+        if (_timerPoints >=100 || _timerPoints >= 500) {
+            duration -= 0.5;
+        } else if (_timerPoints >= 200) {
+            duration -= 1;
+        }
+        
         int randomPosition = [self getRandomNumberBetween:1 to:4];
         
         switch (randomPosition) {
             case 1:
                 _gop.scale = 0.5;
                 cgpath = [self topBottom];
-                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:6];
+                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:duration];
                 scale = [SKAction scaleTo:0.1 duration:6];
                 break;
                 
             case 2:
                 _gop.scale = 0.1;
                 cgpath = [self bottomTop];
-                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:6];
+                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:duration];
                 scale = [SKAction scaleTo:0.5 duration:6];
                 break;
                 
             case 3:
                 _gop.scale = 0.3;
                 cgpath = [self leftRightCurveTop];
-                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:6];
+                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:duration];
                 scale = [SKAction scaleTo:0.3 duration:6];
                 break;
                 
             case 4:
                 _gop.scale = 0.3;
                 cgpath = [self leftRightCurveBottom];
-                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:6];
+                followPath = [SKAction followPath:cgpath asOffset:NO orientToPath:NO duration:duration];
                 scale = [SKAction scaleTo:0.3 duration:6];
                 break;
             default:
@@ -325,7 +356,7 @@ NSInteger *gameTimerScore = 0;
     int x_end = [self getRandomNumberBetween:20 to:300];
     [bezierPath moveToPoint: CGPointMake(x, -50.0)];
     [bezierPath addCurveToPoint: CGPointMake(x, 206.5) controlPoint1: CGPointMake(x, -50) controlPoint2: CGPointMake(9.5, 177.5)];
-    [bezierPath addCurveToPoint: CGPointMake(238.5, 349.5) controlPoint1: CGPointMake(129.5, 235.5) controlPoint2: CGPointMake(259.5, 291.5)];
+    [bezierPath addCurveToPoint: CGPointMake([self getRandomNumberBetween:20 to:300], 349.5) controlPoint1: CGPointMake([self getRandomNumberBetween:20 to:300], 235.5) controlPoint2: CGPointMake([self getRandomNumberBetween:20 to:300], 291.5)];
     [bezierPath addCurveToPoint: CGPointMake(x_end, 600) controlPoint1: CGPointMake(217.5, 407.5) controlPoint2: CGPointMake(x_end, 600)];
     
     return bezierPath.CGPath;
@@ -351,7 +382,7 @@ NSInteger *gameTimerScore = 0;
     
     [bezierPath moveToPoint: CGPointMake(x, 600)];
     [bezierPath addCurveToPoint: CGPointMake(x, 366.5) controlPoint1: CGPointMake(x, 600) controlPoint2: CGPointMake(x, 459.5)];
-    [bezierPath addCurveToPoint: CGPointMake(218.5, 193.5) controlPoint1: CGPointMake(131.5, 273.5) controlPoint2: CGPointMake(254.5, 249.5)];
+    [bezierPath addCurveToPoint: CGPointMake([self getRandomNumberBetween:20 to:300], 193.5) controlPoint1: CGPointMake([self getRandomNumberBetween:20 to:300], 273.5) controlPoint2: CGPointMake([self getRandomNumberBetween:20 to:300], 249.5)];
     [bezierPath addCurveToPoint: CGPointMake(x_end, -50) controlPoint1: CGPointMake(182.5, 137.5) controlPoint2: CGPointMake(x_end, -50)];
     
     return bezierPath.CGPath;
@@ -404,13 +435,13 @@ NSInteger *gameTimerScore = 0;
 }
 
 - (void) hpBarSize{
-    int diff = 100 - healthPoints;
-    float newPosition = 0 - (3.2 * diff);
+    int diff = 50 - healthPoints;
+    float newPosition = 0 - (6.4 * diff);
     _hpBar.position = CGPointMake(newPosition, 568);
     
-    if (healthPoints >= 75) {
+    if (healthPoints >= 25) {
         _hpBar.color = [UIColor greenColor];
-    } else if (healthPoints <= 75 && healthPoints >=50) {
+    } else if (healthPoints <= 25 && healthPoints >=15) {
         _hpBar.color = [UIColor orangeColor];
     } else {
         _hpBar.color = [UIColor redColor];

@@ -46,9 +46,8 @@
         
         NSString * playerscoremsg = [NSString stringWithFormat:@"Player Score: %ld",(long)player_score];
         
-        SKLabelNode *playerscore = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Neue"];
+        SKLabelNode *playerscore = [SKLabelNode labelNodeWithFontNamed:@"Standard0765"];
         playerscore.text = playerscoremsg;
-        playerscore.fontColor = [SKColor blackColor];
         playerscore.position = CGPointMake(self.size.width/2, 180);
         playerscore.name = @"Player Score";
         [playerscore setScale:.5];
@@ -74,7 +73,7 @@
             }
             NSString * highscoremsg = [NSString stringWithFormat:@"Highest Score: %@",hightestScore];
             
-            SKLabelNode *highscore = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Neue"]; //Displaying highest score label
+            SKLabelNode *highscore = [SKLabelNode labelNodeWithFontNamed:@"Standard0765"]; //Displaying highest score label
             highscore.text = highscoremsg;
             highscore.fontColor = [SKColor greenColor];
             highscore.position = CGPointMake(self.size.width/2, 205);

@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import <CoreMotion/CoreMotion.h>
+#import <Parse/Parse.h>
 static const uint8_t crosshairCategory = 1;
 static const uint8_t gopCategory = 2;
 
