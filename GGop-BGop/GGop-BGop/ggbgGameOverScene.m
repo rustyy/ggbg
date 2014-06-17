@@ -21,37 +21,35 @@
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
         
-        NSString * message = @"Game Over";
-        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        label.text = message;
-        label.fontSize = 40;
-        label.fontColor = [SKColor blackColor];
-        label.position = CGPointMake(self.size.width/2, self.size.height/2);
-        [self addChild:label];
+        //adding the Logo
+        SKSpriteNode *logo = [SKSpriteNode spriteNodeWithImageNamed:@"gameover"];
+        logo.size = CGSizeMake(315, 300);
+        logo.zPosition = 6;
+        logo.position = CGPointMake(self.size.width/2, 370);
+        [self addChild:logo];
         
-        NSString * retrymessage = @"Replay Game";
-        SKLabelNode *retryButton = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        retryButton.text = retrymessage;
-        retryButton.fontColor = [SKColor blackColor];
-        retryButton.position = CGPointMake(self.size.width/2, 50);
+        SKSpriteNode *retryButton = [SKSpriteNode spriteNodeWithImageNamed:@"replay"];
+        retryButton.size = CGSizeMake(200, 66);
+        retryButton.zPosition = 6;
+        retryButton.position = CGPointMake(self.size.width/2, 130);
         retryButton.name = @"retry";
         [self addChild:retryButton];
         
-        NSString * homeMessage = @"Home";
-        SKLabelNode *homeButtom = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        homeButtom.text = homeMessage;
-        homeButtom.fontColor = [SKColor blackColor];
-        homeButtom.position = CGPointMake(self.size.width/2, 150);
-        homeButtom.name = @"home";
-        [self addChild:homeButtom];
+        //adding the Startbutton
+        SKSpriteNode *homeButton = [SKSpriteNode spriteNodeWithImageNamed:@"home"];
+        homeButton.size = CGSizeMake(200, 66);
+        homeButton.zPosition = 6;
+        homeButton.position = CGPointMake(self.size.width/2, 60);
+        homeButton.name = @"home";
+        [self addChild:homeButton];
         
         
         NSString * playerscoremsg = [NSString stringWithFormat:@"Player Score: %ld",(long)player_score];
         
-        SKLabelNode *playerscore = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        SKLabelNode *playerscore = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Neue"];
         playerscore.text = playerscoremsg;
         playerscore.fontColor = [SKColor blackColor];
-        playerscore.position = CGPointMake(self.size.width/2, 250);
+        playerscore.position = CGPointMake(self.size.width/2, 180);
         playerscore.name = @"Player Score";
         [playerscore setScale:.5];
         
@@ -76,10 +74,10 @@
             }
             NSString * highscoremsg = [NSString stringWithFormat:@"Highest Score: %@",hightestScore];
             
-            SKLabelNode *highscore = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"]; //Displaying highest score label
+            SKLabelNode *highscore = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Neue"]; //Displaying highest score label
             highscore.text = highscoremsg;
             highscore.fontColor = [SKColor greenColor];
-            highscore.position = CGPointMake(self.size.width/2, 200);
+            highscore.position = CGPointMake(self.size.width/2, 205);
             [highscore setScale:.5];
             [self addChild:highscore];
             

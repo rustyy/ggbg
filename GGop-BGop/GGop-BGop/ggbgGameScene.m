@@ -40,11 +40,11 @@ NSInteger *gameTimerScore = 0;
 
         
         //adding gameTimerPoints
-        _gameTimerPoints = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        _gameTimerPoints.text = [NSString stringWithFormat:@"Time: %d", _timerPoints];
-        _gameTimerPoints.fontSize = 20;
+        _gameTimerPoints = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Neue"];
+        _gameTimerPoints.text = [NSString stringWithFormat:@"Score: %d", _timerPoints];
+        _gameTimerPoints.fontSize = 35;
         _gameTimerPoints.position = CGPointMake(CGRectGetMidX(self.frame), 500);
-        _gameTimerPoints.zPosition = 5;
+        _gameTimerPoints.zPosition = 1;
         
         [self addChild:_gameTimerPoints];
         
@@ -191,7 +191,7 @@ NSInteger *gameTimerScore = 0;
     healthPoints--;
     
     
-    _gameTimerPoints.text = [[NSString alloc] initWithFormat:@"%d", _timerPoints];
+    _gameTimerPoints.text = [[NSString alloc] initWithFormat:@"Score: %d", _timerPoints];
     [self hpBarSize];
     if (healthPoints <=0) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
